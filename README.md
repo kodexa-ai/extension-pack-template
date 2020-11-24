@@ -79,4 +79,4 @@ This will generate markdown files documenting the actions actions described in t
 You'll need to run the Kodexa CLI tool's 'package' command to package the code for deployment to the Kodexa Platform.  This template repository contains a workflow (.github/workflows/main.yml) where you can see this in action.  In this example. we've set the site option of the package command to deploy the packaged code (.tar.gz) to this Github repository's Github pages.  Your setup may differ.
 
 ## Kodexa CLI documentation
-Additional documentation for the Kodexa CLI tool can be found (here)[https://developer.kodexa.com/learning-kodexa/cli/#installing]
+Additional documentation for the Kodexa CLI tool can be found on our documentation site [https://developer.kodexa.com](https://developer.kodexa.com/learning-kodexa/cli/#installing)
