@@ -1,5 +1,4 @@
-# Demonstrating extension pack for use on the Kodexa platform
-
+# Python template to build extension packs for the Kodexa platform
 The template serves as a base for building custom extension packs to be deployed on the Kodexa Platform.
 
 ## Create a new repository using this template
@@ -7,16 +6,16 @@ Fill in the requested info and click Create repository from template.
 
 ## Update the project with your specific values:
 * Replace all instances of demo_extension with the true name of your module:
-> * environment name in environment.yml
-> * module name (name of folder)
-> * pythonPackage value in kodexa.yml
-> * package name for the 'test-tagger' step definition in kodexa.yml
-> * name and package name in setup.py
-> * logger name in dummy_module.py (assuming you keep that as an example)
-> * module name in tagger_test.py
+    * environment name in environment.yml
+    * module name (name of folder)
+    * pythonPackage value in kodexa.yml
+    * package name for the 'test-tagger' step definition in kodexa.yml
+    * name and package name in setup.py
+    * logger name in dummy_module.py (assuming you keep that as an example)
+    * module name in tagger_test.py
 
 * Replace all instances of demo-extension with the true name of your extension:
-> * extension pack slug value in kodexa.yml
+    * extension pack slug value in kodexa.yml
 
 * Update setup.py author, description, email, and url values with your own information.
 
@@ -46,12 +45,12 @@ This will create the conda environment (the name will be whatever you set when y
 ### Install dependencies with pip
 Activate the conda environement, then use pip to install dependencies:
 
-> pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## Develop your custom actions
 You can use the basic example, provided in the dummy_module.py, as a jumping off point for the creation of custom actions.  All Kodexa actions are written as classes and require 3 methods:
 
-* __init__: this is where you will specify any parameters to that will be used throughout the class.  Parameters are not required, but if any other methods in your class require parameter values, this is where they must be specified.
+* \_\_init__: this is where you will specify any parameters to that will be used throughout the class.  Parameters are not required, but if any other methods in your class require parameter values, this is where they must be specified.
 * get_name:  a method that takes no parameters and returns the name of the method.
 * process: the action called by the pipeline to do the actual processing of the logic.  This method always, and only, takes two parameters, document and context.
 
@@ -62,20 +61,22 @@ Once your action is ready to be deployed as part of the custom extension pack, y
 
 * Within a single extension pack, action slugs are required and must be unique.
 * Options:
-> * Options are not required.  If your action has no options, you should list the setting as:
->    options: []
+    * Options are not required.  If your action has no options, you should list the setting as:
+
+        options: []
 * If you do provide options, the following information should also be provide:
-> * name: The name for the option (required).  Should be composed of letters and underscores.
-> * required: Boolean indicating if this option is/is not required (True/False)
-> * type:  The data type of the option.  Valid values are: string, number, boolean, selector, list, and regex.
-> * listType: If the data type is set as list, you'll need to set the type of data to be expected in this list (string, boolean, etc.)
-> * default: The default value of the option, if it's not required and not supplied
-> * description: A description of the action - what it requires, what it does, and what it returns.
+    * name: The name for the option (required).  Should be composed of letters and underscores.
+    * required: Boolean indicating if this option is/is not required (True/False)
+    * type:  The data type of the option.  Valid values are: string, number, boolean, selector, list, and regex.
+    * listType: If the data type is set as list, you'll need to set the type of data to be expected in this list (string, boolean, etc.)
+    * default: The default value of the option, if it's not required and not supplied
+    * description: A description of the action - what it requires, what it does, and what it returns.
 
 ### Generate documentation
 Once the action(s) are satisfactory, and you've specified all their details in the kodexa.yml, you should generation for the actions by running the 'document' command of the kodexa cli:
-> kodexa document
 
+    kodexa document
+    
 This will generate markdown files documenting the actions actions described in the kodexa.yml.
 
 ## Package extension for deployment
