@@ -1,0 +1,37 @@
+---
+name: Demo Extension Pack
+slug: demo-extension
+description: Demostraiong extension pack for use on the Kodexa platform
+type: extensionPack
+
+source:
+  type: pythonPackage
+  pythonPackage: demo_extension
+  location: https://github.com/kodexa-ai/extension-pack-template
+  additionalPackages: curl
+
+services:
+
+- slug: test-tagger
+  name: Test Tagger
+  type: action
+  description: Tag all nodes that contain the word apple (using regex).
+  readme: ''
+  step:
+    package: demo_extension
+    class: TestTagger
+  metadata:
+    requiresSource: false
+    documented: true
+    accept: ".kdxa"
+    avatar:
+      icon: tags
+      iconGroup: font-awesome
+    tags:
+    - Tagger
+    options:
+    - name: tag_to_apply
+      required: true
+      type: string
+      default: RED
+      description: The tag that will be applied to the identified nodes

@@ -1,0 +1,4 @@
+name: demo_extension
+dependencies:
+  - python=3.8
+  - pip
