@@ -2,7 +2,10 @@
 
 The template serves as a base for building custom extension packs to be deployed on the Kodexa Platform.
 
-## Clone the repository, then update the project with your specific values:
+## Create a new repository using this template
+Fill in the requested info and click Create repository from template. 
+
+## Update the project with your specific values:
 * Replace all instances of demo_extension with the true name of your module:
 > * environment name in environment.yml
 > * module name (name of folder)
