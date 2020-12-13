@@ -24,3 +24,7 @@ setup(name='demo_extension',
       ],
       setup_requires=["pytest-runner"],
       tests_require=["pytest"])
+
+
+import shutil    
+shutil.copy('runtime-requirements.txt','dist/runtime-requirements.txt') 

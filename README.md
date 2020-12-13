@@ -23,7 +23,7 @@ Fill in the requested info and click Create repository from template.
 
 * Change/update/remove --site option of package command that's specified in the .github/workflows/main.yml file.  More information on this setting can be found further down this README in the "Package extension for deployment" section.
 
-> NOTE:  setup.py already includes kodexa as a dependency in 'install_requires'.  You will need to add then names of any other packages needed at runtime here, as well.
+> NOTE:  setup.py already includes kodexa as a dependency in 'install_requires'.  You will need to add the names of any other packages needed at runtime here, as well.
 
 
 ## Setting up Development Environment
