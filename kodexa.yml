@@ -1,7 +1,7 @@
 ---
 name: Demo Extension Pack
 slug: demo-extension
-description: Demostraiong extension pack for use on the Kodexa platform
+description: Demonstrating extension pack for use on the Kodexa platform
 type: extensionPack
 
 source:

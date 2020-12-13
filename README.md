@@ -8,7 +8,7 @@ Fill in the requested info and click Create repository from template.
 * Replace all instances of demo_extension with the true name of your module:
     * environment name in environment.yml
     * module name (name of folder)
-    * pythonPackage value in kodexa.yml
+    * name, slug, description, source-pythonPackage, and source-location values in kodexa.yml
     * package name for the 'test-tagger' step definition in kodexa.yml
     * name and package name in setup.py
     * logger name in dummy_module.py (assuming you keep that as an example)
