@@ -1,0 +1,4 @@
+
+# This model is an example of a runtime requirement that may need to be copied over for use - see the setup.py.
+
+https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-2.3.1/en_core_web_lg-2.3.1.tar.gz#egg=en_core_web_lg

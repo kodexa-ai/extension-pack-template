@@ -26,5 +26,8 @@ setup(name='demo_extension',
       tests_require=["pytest"])
 
 
-import shutil    
-shutil.copy('runtime-requirements.txt','dist/runtime-requirements.txt') 
+# if you have requirements that need to be copied over for runtime use 
+# (like the spaCy model in the runtime-requirements.txt example), place them in your runtime-requirements.txt file
+# and uncomment the lines below
+#import shutil    
+#shutil.copy('runtime-requirements.txt','dist/runtime-requirements.txt') 
