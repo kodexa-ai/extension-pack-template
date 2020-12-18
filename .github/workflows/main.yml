@@ -26,7 +26,7 @@ jobs:
         pip install -r requirements.txt
     - name: Build and publish
       run: |
-# NOTE:  the slash '/' at the end of the site URL is required
+        # NOTE:  the slash '/' at the end of the site URL is required
         python setup.py sdist bdist_wheel
         kodexa package --site --url https://kodexa-ai.github.io/extension-pack-template/
     - name: Deploy GitHub Page
